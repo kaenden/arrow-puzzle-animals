@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" />
-    <script type="module" crossorigin src="./assets/index-BfobxHiy.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Cg7AZU3q.css">
+    <script type="module" crossorigin src="./assets/index-DQueClB0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DFfatjeL.css">
   </head>
   <body>
     <div id="boot" role="progressbar" aria-label="Loading"><i></i></div>
@@ -42,22 +42,28 @@
       <!-- Over the level while a lesson points at a button: dimmed all round it. -->
       <div id="spot" hidden></div>
       <div id="tip" hidden><div class="tip-steps" id="tip-steps"></div><b id="tip-title"></b><span id="tip-sub"></span><button class="tip-skip" id="tip-skip" type="button" hidden><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><path d="M2 2 11 8 2 14ZM12 2 21 8 12 14Z" fill="currentColor"/></svg>Skip</button></div>
+      <!-- dev -->
       <div class="hud-dev" id="hud-dev" hidden>
         <button data-dev="win">Win</button>
         <button data-dev="hearts">♥ full</button>
         <button data-dev="hints">+3 hints</button>
       </div>
+      <!-- /dev -->
     </div>
 
     <div id="scene" hidden>
       <div class="scene-top"><span class="eyebrow" id="s-eyebrow"></span><div id="s-tier"></div><h2 id="s-title"></h2><p class="s-goal" id="s-goal"></p></div>
-      <button class="scene-skip" id="s-skip" type="button"><span id="s-skip-label">Tap to start</span><svg viewBox="0 0 24 16" width="22" height="15" aria-hidden="true"><path d="M2 2 11 8 2 14ZM12 2 21 8 12 14Z" fill="currentColor"/></svg></button>
+      <!-- Straight to play; on a first visit, the tips' way too (How to play). -->
+      <div class="scene-ways">
+        <button class="scene-skip" id="s-skip" type="button"><span id="s-skip-label">Tap to start</span><svg viewBox="0 0 24 16" width="22" height="15" aria-hidden="true"><path d="M2 2 11 8 2 14ZM12 2 21 8 12 14Z" fill="currentColor"/></svg></button>
+        <button class="scene-guide" id="s-guide" type="button" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.6.5 1 1.1 1 1.9v.8h5.6v-.8c0-.8.4-1.4 1-1.9A6.5 6.5 0 0 0 12 2.5z" fill="#ffd94a" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.6 19.2h4.8M10.4 21.5h3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>How to play</button>
+      </div>
     </div>
     <div id="bubbles"></div>
 
     <div id="home" class="screen">
       <div class="home-top">
-        <button id="dev-open" class="pill dev" hidden>DEV</button>
+        <!-- dev --><button id="dev-open" class="pill dev" hidden>DEV</button><!-- /dev -->
         <button id="home-stars" class="stars" aria-label="Stars to spend on the farm"><svg class="sticker" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#ffc22e" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg><b id="home-stars-n">0</b></button>
         <span class="grow"></span>
         <button id="t-album" class="round" aria-label="Album: your animals, places and badges"><svg class="sticker" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M7 5H4.5a2.6 2.6 0 0 0 2.8 4.6M17 5h2.5a2.6 2.6 0 0 1-2.8 4.6" fill="none" stroke="#e8a317" stroke-width="1.8" stroke-linecap="round"/><path d="M7 3h10v5.5a5 5 0 0 1-10 0z" fill="#ffc22e" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M10.6 13.2h2.8v3.6h-2.8z" fill="#e8a317"/><path d="M7.5 16.8h9v4.2h-9z" fill="#a86a32" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 5.2l.9 1.8 2 .3-1.4 1.4.3 2-1.8-.9-1.8.9.3-2-1.4-1.4 2-.3z" fill="#fff6d0"/></svg><i class="dot" aria-hidden="true"></i></button>
@@ -121,6 +127,7 @@
       <button id="album-done" class="ghost">Back</button>
     </div>
 
+    <!-- dev: the developer's tools (the dev screen; further down the style lab): left out of the CrazyGames build. -->
     <div id="dev" class="screen" hidden>
       <h2>Dev mode</h2>
       <p class="sub" id="dev-state"></p>
@@ -175,6 +182,7 @@
       </div>
       <button id="dev-back" class="ghost">Back</button>
     </div>
+    <!-- /dev -->
 
     <!-- A level over: one card (as the pause card): where, how it went; then the ways on, one under another. -->
     <div id="result" class="screen" hidden>
@@ -202,6 +210,7 @@
       </div>
     </div>
 
+    <!-- dev -->
     <div id="lab" hidden>
       <div class="lab-top">
         <button class="lab-toggle" id="lab-toggle" aria-expanded="true" aria-controls="lab-rows"><span id="lab-summary">Options</span><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -221,6 +230,7 @@
         <button id="lab-play" class="primary">Play it</button>
       </div>
     </div>
+    <!-- /dev -->
 
     <div id="farm" hidden>
       <div class="farm-top">
@@ -278,6 +288,12 @@
           </div>
         </div>
         <div class="set-row">
+          <span class="set-label">Help</span>
+          <div class="set-toggles">
+            <button id="t-tips" class="toggle" aria-pressed="true" aria-label="Tips: lessons and new things shown as you play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.6.5 1 1.1 1 1.9v.8h5.6v-.8c0-.8.4-1.4 1-1.9A6.5 6.5 0 0 0 12 2.5z" fill="currentColor"/><path d="M9.6 19.2h4.8M10.4 21.5h3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Tips</button>
+          </div>
+        </div>
+        <div class="set-row">
           <span class="set-label">Look</span>
           <div class="swatches" id="ui-swatches" role="group" aria-label="Look"></div>
         </div>
@@ -313,6 +329,7 @@
         <p class="sub" id="ask-sub"></p>
         <button id="ask-no" class="primary">Keep learning</button>
         <button id="ask-yes" class="ghost">Yes, skip</button>
+        <button id="ask-all" class="link">Turn off all tips</button>
       </div>
     </div>
   </body>
