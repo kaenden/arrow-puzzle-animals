@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" />
-    <script type="module" crossorigin src="./assets/index-iCSbH_Q7.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DF-H5aYn.css">
+    <script type="module" crossorigin src="./assets/index-C8WlfX15.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CpLxi6C2.css">
   </head>
   <body>
     <div id="boot" role="progressbar" aria-label="Loading"><i></i></div>
@@ -38,12 +38,8 @@
         </button>
         <button id="b-clover" class="round booster" aria-label="Lucky clover: your next mistake is free"><svg class="sticker" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M13.5 15.5l3.5 6" stroke="#2f7d27" stroke-width="2.2" stroke-linecap="round"/><g fill="#5cc03c" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="7.6" r="3.4"/><circle cx="16.4" cy="12" r="3.4"/><circle cx="12" cy="16.4" r="3.4"/><circle cx="7.6" cy="12" r="3.4"/></g></svg><b>0</b></button>
       </div>
-      <!-- The farm's first two levels with tips off: the lessons a tap away. -->
-      <button id="h-learn" class="learn" type="button" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.6.5 1 1.1 1 1.9v.8h5.6v-.8c0-.8.4-1.4 1-1.9A6.5 6.5 0 0 0 12 2.5z" fill="#ffd94a" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.6 19.2h4.8M10.4 21.5h3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>How to play</button>
       <button id="h-new" class="round right" aria-label="New cube"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4v4h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <!-- Over the level while a lesson points at a button: dimmed all round it. -->
-      <div id="spot" hidden></div>
-      <div id="tip" hidden><div class="tip-steps" id="tip-steps"></div><b id="tip-title"></b><span id="tip-sub"></span><button class="tip-skip" id="tip-skip" type="button" hidden><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><path d="M2 2 11 8 2 14ZM12 2 21 8 12 14Z" fill="currentColor"/></svg>Skip</button></div>
+      <div id="tip" hidden><b id="tip-title"></b><span id="tip-sub"></span></div>
       <!-- dev -->
       <div class="hud-dev" id="hud-dev" hidden>
         <button data-dev="win">Win</button>
@@ -160,7 +156,7 @@
         <section>
           <h3>Play any level</h3>
           <div class="dev-row" id="dev-levels"></div>
-          <div class="dev-row"><button data-dev="guide" id="dev-guide">Lessons (levels 1–2): always</button></div>
+          <div class="dev-row"><button data-dev="guide" id="dev-guide">Gentle levels 1–2: always</button></div>
         </section>
         <section>
           <h3>Free play</h3>
@@ -296,7 +292,7 @@
         <div class="set-row">
           <span class="set-label">Help</span>
           <div class="set-toggles">
-            <button id="t-tips" class="toggle" aria-pressed="true" aria-label="Tips: lessons and new things shown as you play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.6.5 1 1.1 1 1.9v.8h5.6v-.8c0-.8.4-1.4 1-1.9A6.5 6.5 0 0 0 12 2.5z" fill="currentColor"/><path d="M9.6 19.2h4.8M10.4 21.5h3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Tips</button>
+            <button id="t-tips" class="toggle" aria-pressed="true" aria-label="Tips: new things explained as you play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.6.5 1 1.1 1 1.9v.8h5.6v-.8c0-.8.4-1.4 1-1.9A6.5 6.5 0 0 0 12 2.5z" fill="currentColor"/><path d="M9.6 19.2h4.8M10.4 21.5h3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Tips</button>
           </div>
         </div>
         <div class="set-row">
@@ -325,18 +321,6 @@
     </div>
     <div id="gift" hidden role="status"></div>
     <div id="badge" hidden role="status"></div>
-    <div id="tour" hidden><b id="tour-title"></b><span id="tour-sub"></span><button class="tip-skip" id="tour-skip" type="button" hidden><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><path d="M2 2 11 8 2 14ZM12 2 21 8 12 14Z" fill="currentColor"/></svg>Skip</button></div>
-    <!-- Skipping a lesson (or the tour) is asked first: going on is the strong button. -->
-    <div id="ask" hidden role="dialog" aria-modal="true" aria-labelledby="ask-title">
-      <div class="settings-card ask-card">
-        <i class="tape" aria-hidden="true"></i>
-        <span class="ask-ico" aria-hidden="true"><svg viewBox="0 0 24 16" width="34" height="23"><path d="M2 2 11 8 2 14ZM12 2 21 8 12 14Z" fill="currentColor"/></svg></span>
-        <h2 id="ask-title">Skip the tutorial?</h2>
-        <p class="sub" id="ask-sub"></p>
-        <button id="ask-no" class="primary">Keep learning</button>
-        <button id="ask-yes" class="ghost">Yes, skip</button>
-        <button id="ask-all" class="link">Turn off all tips</button>
-      </div>
-    </div>
+    <div id="tour" hidden><b id="tour-title"></b><span id="tour-sub"></span></div>
   </body>
 </html>
