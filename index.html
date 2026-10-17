@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" />
-    <script type="module" crossorigin src="./assets/index-DiEWctfR.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BfAh2Ndi.css">
+    <script type="module" crossorigin src="./assets/index-mSysYYIn.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-3JG9PdSk.css">
   </head>
   <body>
     <div id="boot" role="progressbar" aria-label="Loading"><i></i></div>
@@ -210,6 +210,8 @@
         <button id="r-retry" class="ghost"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4v4h4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="r-retry-label">Replay</span></button>
         <button id="r-home" class="ghost"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5M6 9.5V20h12V9.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>Home</button>
       </div>
+      <!-- From the second level won in a visit: what coming back tomorrow brings (the daily gift). -->
+      <p class="tomorrow" id="r-tomorrow" hidden></p>
       <!-- Once, on the first card (the CrazyGames build, stats on): what the stats are, and where to turn them off. -->
       <p class="r-privacy" id="r-privacy" hidden>We count how far players get (no name, no account) to make the game better. Settings › Stats turns it off.</p>
       </div>
@@ -274,6 +276,8 @@
           <button id="p-restart" class="ghost"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4v4h4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Restart</button>
           <button id="p-home" class="ghost"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5M6 9.5V20h12V9.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>Home</button>
         </div>
+        <!-- What coming back tomorrow brings (the daily gift), once something is won: a player about to leave often stops here. -->
+        <p class="tomorrow" id="p-tomorrow" hidden></p>
         <div class="pause-quick" role="group" aria-label="Sound and look">
           <button id="p-music" class="quick" aria-pressed="true"><i><svg class="sticker" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M9 17.5V6l10-2.2v11.7" fill="none" stroke="#7b5ce0" stroke-width="2.4" stroke-linejoin="round"/><circle cx="6.5" cy="17.5" r="3" fill="#9b7cf4" stroke="#fff" stroke-width="1.5"/><circle cx="16.5" cy="15.5" r="3" fill="#9b7cf4" stroke="#fff" stroke-width="1.5"/><g class="off"><path d="M4.5 4.5l15 15" stroke-width="5.5"/><path d="M4.5 4.5l15 15" stroke-width="2.4"/></g></svg></i><small>Music</small></button>
           <button id="p-sound" class="quick" aria-pressed="true"><i><svg class="sticker" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3.5 9.5h4l5.5-4.5v14l-5.5-4.5h-4z" fill="#4aa8e0" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="#2f86c0" stroke-width="2.2" stroke-linecap="round"/><g class="off"><path d="M4.5 4.5l15 15" stroke-width="5.5"/><path d="M4.5 4.5l15 15" stroke-width="2.4"/></g></svg></i><small>Sounds</small></button>
