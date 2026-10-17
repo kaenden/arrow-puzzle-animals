@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" />
-    <script type="module" crossorigin src="./assets/index-CcQ5-kTc.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DZNqto1R.css">
+    <script type="module" crossorigin src="./assets/index-DiEWctfR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BfAh2Ndi.css">
   </head>
   <body>
     <div id="boot" role="progressbar" aria-label="Loading"><i></i></div>
@@ -210,6 +210,8 @@
         <button id="r-retry" class="ghost"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4v4h4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="r-retry-label">Replay</span></button>
         <button id="r-home" class="ghost"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5M6 9.5V20h12V9.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>Home</button>
       </div>
+      <!-- Once, on the first card (the CrazyGames build, stats on): what the stats are, and where to turn them off. -->
+      <p class="r-privacy" id="r-privacy" hidden>We count how far players get (no name, no account) to make the game better. Settings › Stats turns it off.</p>
       </div>
     </div>
 
@@ -294,7 +296,10 @@
           <span class="set-label">Help</span>
           <div class="set-toggles">
             <button id="t-tips" class="toggle" aria-pressed="true" aria-label="Tips: new things explained as you play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.6.5 1 1.1 1 1.9v.8h5.6v-.8c0-.8.4-1.4 1-1.9A6.5 6.5 0 0 0 12 2.5z" fill="currentColor"/><path d="M9.6 19.2h4.8M10.4 21.5h3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Tips</button>
+            <!-- The stats sent to ByteBrew (the CrazyGames build only: shown there). -->
+            <button id="t-stats" class="toggle" aria-pressed="true" hidden aria-label="Stats: anonymous play data that helps make the game better"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 20V13M12 20V5M19 20v-9" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg>Stats</button>
           </div>
+          <p class="set-why" id="stats-why" hidden>Stats: how far players get, sent without a name or an account, to make the game better.</p>
         </div>
         <div class="set-row">
           <span class="set-label">Look</span>
