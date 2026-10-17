@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" />
-    <script type="module" crossorigin src="./assets/index-mSysYYIn.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-3JG9PdSk.css">
+    <script type="module" crossorigin src="./assets/index-CCOe4lot.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-u8vwgBjt.css">
   </head>
   <body>
     <div id="boot" role="progressbar" aria-label="Loading"><i></i></div>
@@ -63,6 +63,8 @@
         <!-- dev --><button id="dev-open" class="pill dev" hidden>DEV</button><!-- /dev -->
         <button id="home-stars" class="stars" aria-label="Stars to spend on the farm"><svg class="sticker" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#ffc22e" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg><b id="home-stars-n">0</b></button>
         <span class="grow"></span>
+        <!-- The daily cube (open once three levels are won): a dot until today's is solved, then a tick. -->
+        <button id="t-daily" class="round" hidden aria-label="Daily cube"><svg class="sticker" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3" fill="#fff8ec" stroke="#fff" stroke-width="1.6"/><path d="M3.5 8a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v2h-17z" fill="#e2553f"/><path d="M8 3.2v3.6M16 3.2v3.6" stroke="#8a96a8" stroke-width="2" stroke-linecap="round"/><path d="M7.5 15.5h7.5m0 0-2.4-2.4m2.4 2.4-2.4 2.4" fill="none" stroke="#2d2a32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><i class="dot" aria-hidden="true"></i><i class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="#5cc03c" stroke="#fff" stroke-width="2.4"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></button>
         <button id="t-album" class="round" aria-label="Album: your animals, places and badges"><svg class="sticker" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M7 5H4.5a2.6 2.6 0 0 0 2.8 4.6M17 5h2.5a2.6 2.6 0 0 1-2.8 4.6" fill="none" stroke="#e8a317" stroke-width="1.8" stroke-linecap="round"/><path d="M7 3h10v5.5a5 5 0 0 1-10 0z" fill="#ffc22e" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M10.6 13.2h2.8v3.6h-2.8z" fill="#e8a317"/><path d="M7.5 16.8h9v4.2h-9z" fill="#a86a32" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 5.2l.9 1.8 2 .3-1.4 1.4.3 2-1.8-.9-1.8.9.3-2-1.4-1.4 2-.3z" fill="#fff6d0"/></svg><i class="dot" aria-hidden="true"></i></button>
         <button id="t-settings" class="round" aria-label="Settings"><svg class="sticker" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M10.3 2.6h3.4l.5 2.6c.6.2 1.2.5 1.7.9l2.5-.9 1.7 2.9-2 1.7c.1.6.1 1.3 0 1.9l2 1.7-1.7 2.9-2.5-.9c-.5.4-1.1.7-1.7.9l-.5 2.6h-3.4l-.5-2.6c-.6-.2-1.2-.5-1.7-.9l-2.5.9-1.7-2.9 2-1.7a6.6 6.6 0 0 1 0-1.9l-2-1.7 1.7-2.9 2.5.9c.5-.4 1.1-.7 1.7-.9zM12 8.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 1 0 0-6.4z" fill="#8a96a8" fill-rule="evenodd" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg></button>
       </div>
@@ -120,6 +122,7 @@
       <div class="album-sum" id="album-sum"></div>
       <section class="album-part"><h3>Places</h3><div class="album-places" id="album-places"></div></section>
       <section class="album-part"><h3>Families</h3><div class="album-fams" id="album-fams"></div></section>
+      <section class="album-part" id="album-daily-part" hidden><h3>Daily cubes</h3><div class="album-daily" id="album-daily"></div></section>
       <section class="album-part"><h3>Badges</h3><div class="album-badges" id="album-badges"></div></section>
       <button id="album-done" class="ghost">Back</button>
     </div>
